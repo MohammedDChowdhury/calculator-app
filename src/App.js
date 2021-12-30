@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+/*
+Operations: 
+Addition, Subtraction, Multiplication, Division. 
+
+Addtiional operations we could add:
+Squaring and square root 
+
+How to implement:
+Numbers from user to be stored into an array possibly
+and we just add each element. 
+So we would deal with the keyboard being a number input html. 
+Maybe using the target values and manipulating them in some way.
+*/
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Calculator App</h1>
+
+      <body></body>
+    </>
   );
-}
+};
 
 export default App;
