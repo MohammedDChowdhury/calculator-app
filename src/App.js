@@ -1,5 +1,6 @@
 import "./App.css";
-
+// import Buttons from "./components/Buttons";
+import Keypad from "./components/Keypad";
 /*
 Operations: 
 Addition, Subtraction, Multiplication, Division. 
@@ -16,11 +17,14 @@ Maybe using the target values and manipulating them in some way.
 
 const App = () => {
   return (
-    <>
-      <h1>Calculator App</h1>
+    <div>
+      <title>Calculator App</title>
 
-      <body></body>
-    </>
+      <h1>Calculator App</h1>
+      <div>
+        <Keypad />
+      </div>
+    </div>
   );
 };
 
