@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Field from "./Field";
 
 const Keypad = () => {
   const [values, setValue] = useState("");
@@ -19,7 +20,7 @@ const Keypad = () => {
   return (
     <div>
       <input value={values} readOnly />
-      <input value={answers} readOnly />
+      <Field toDisplay={answers} readOnly />
       {console.log(values)}
       <div className="wrapper">
         <button
