@@ -13,6 +13,7 @@ Numbers from user to be stored into an array possibly
 and we just add each element. 
 So we would deal with the keyboard being a number input html. 
 Maybe using the target values and manipulating them in some way.
+Create a new 
 */
 
 const App = () => {
