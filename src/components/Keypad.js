@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Keypad = () => {
-  const [values, setValue] = useState([]);
+  const [values, setValue] = useState("");
   const [answers, setAnswers] = useState([]);
   // const isEquals = (i) =>
   //   setValue(values.map(value, k) =>
@@ -20,80 +20,91 @@ const Keypad = () => {
     <div>
       <input value={values} readOnly />
       <input value={answers} readOnly />
+      {console.log(values)}
       <div className="wrapper">
         <button
           type="button"
-          onClick={(e) => setValue(values + e.target.value)}
+          onClick={(e) => setValue(values + e.target.name)}
           className="buttonStyler"
-          value="+"
+          name="+"
         >
           +
         </button>
         <button
           type="button"
-          onClick={(e) => setValue(values + e.target.value)}
+          onClick={(e) => setValue(values + e.target.name)}
           className="buttonStyler"
-          value="-"
+          name="-"
         >
           -
         </button>
-        <button type="button" className="buttonStyler" value="*">
+        <button
+          type="button"
+          className="buttonStyler"
+          name="*"
+          onClick={(e) => setValue(values + e.target.name)}
+        >
           &times;
         </button>
-        <button type="button" className="buttonStyler" value="/">
+        <button
+          type="button"
+          onClick={(e) => setValue(values + e.target.name)}
+          className="buttonStyler"
+          name="/"
+        >
           &divide;
         </button>
         <button
           type="button"
-          onClick={(e) => setValue(values + e.target.value)}
+          onClick={(e) => setValue(values + e.target.name)}
           // parseInt(e.target.value)
           // onClick={(e) => setValue(values + e.target.value)}
           className="buttonStyler"
-          value="9"
+          name="9"
         >
           9
         </button>
-        <button type="button" className="buttonStyler" value="8">
+        <button type="button" className="buttonStyler" name="8">
           8
         </button>
-        <button type="button" className="buttonStyler" value="7">
+        <button type="button" className="buttonStyler" name="7">
           7
         </button>
 
-        <button type="button" className="buttonStyler" value="6">
+        <button type="button" className="buttonStyler" name="6">
           6
         </button>
-        <button type="button" className="buttonStyler" value="5">
+        <button type="button" className="buttonStyler" name="5">
           5
         </button>
-        <button type="button" className="buttonStyler" value="4">
+        <button type="button" className="buttonStyler" name="4">
           4
         </button>
-        <button type="button" className="buttonStyler" value="3">
+        <button type="button" className="buttonStyler" name="3">
           3
         </button>
-        <button type="button" className="buttonStyler" value="2">
+        <button type="button" className="buttonStyler" name="2">
           2
         </button>
-        <button type="button" className="buttonStyler" value="1">
+        <button type="button" className="buttonStyler" name="1">
           1
         </button>
 
-        <button type="button" className="buttonStyler" value="0">
+        <button type="button" className="buttonStyler" name="0">
           0
         </button>
-        <button type="button" className="buttonStyler" value=".">
+        <button type="button" className="buttonStyler" name=".">
           .
         </button>
-        <button type="button" className="buttonStyler" value="all-clear">
+        <button type="button" className="buttonStyler" name="all-clear">
           AC
         </button>
 
         <button
           type="button"
-          // onClick={() => isEquals(values)}
+          onClick={() => setAnswers(eval(values))} // works currently
           className="equal-sign"
-          value="="
+          name="="
         >
           =
         </button>
